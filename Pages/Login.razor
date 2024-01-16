@@ -1,0 +1,82 @@
+﻿@page "/login"
+@using KarigarBotiqueStore.Data
+@inject NavigationManager NavigationManager
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            @if (!isLoggedIn)
+            {
+                <h2 class="text-center mb-4">Login Form</h2>
+
+                <form @onsubmit="HandleLogin">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username:</label>
+                        <input id="username" @bind="@loginModel.Username" class="form-control" placeholder="Enter Username" />
+                        <div class="invalid-feedback">@validationMessages.Username</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input id="password" @bind="@loginModel.Password" class="form-control" placeholder="Enter Password" type="password" />
+                        <div class="invalid-feedback">@validationMessages.Password</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            }
+            else
+            {
+                <div class="text-center">
+                    <p>Redirecting...</p>
+                    <p>Please wait or <a href="/home">click here</a> if not redirected.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+
+    .container {
+        margin-top: 5rem;
+    }
+
+    .col-md-6 {
+        max-width: 24rem;
+    }
+
+</style>
+
+@code {
+    LoginModel loginModel = new LoginModel();
+    bool isLoggedIn = false;
+    ValidationMessages validationMessages = new ValidationMessages();
+
+    void HandleLogin()
+    {
+        // Simulate a basic login logic (replace with your actual authentication logic)
+        if (loginModel.Username == "admin" && loginModel.Password == "password")
+        {
+            // Successful login, set isLoggedIn to true
+            isLoggedIn = true;
+            NavigationManager.NavigateTo("/home");
+        }
+        else
+        {
+            // Failed login, add error messages to the validationMessages object
+            validationMessages.Username = "Invalid username or password";
+            validationMessages.Password = "Invalid username or password";
+
+            // For simplicity, just reset the password field
+            loginModel.Password = string.Empty;
+        }
+    }
+
+    // Validation class to store error messages
+    class ValidationMessages
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
+}

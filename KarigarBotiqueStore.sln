@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KarigarBotiqueStore", "KarigarBotiqueStore.csproj", "{78B97E62-50BC-4A98-B586-72FC219431F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KbClient", "..\KbClient\KbClient.csproj", "{9857EC5B-414F-4F76-BB3A-3ABD62BBAFAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78B97E62-50BC-4A98-B586-72FC219431F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78B97E62-50BC-4A98-B586-72FC219431F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78B97E62-50BC-4A98-B586-72FC219431F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78B97E62-50BC-4A98-B586-72FC219431F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9857EC5B-414F-4F76-BB3A-3ABD62BBAFAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9857EC5B-414F-4F76-BB3A-3ABD62BBAFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9857EC5B-414F-4F76-BB3A-3ABD62BBAFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9857EC5B-414F-4F76-BB3A-3ABD62BBAFAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10ABED99-54F6-46D2-8FD1-1C8FC9ACA112}
+	EndGlobalSection
+EndGlobal
